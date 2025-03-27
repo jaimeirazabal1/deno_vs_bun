@@ -20,7 +20,7 @@ Comparar el rendimiento de Deno y Bun en condiciones reales, incluyendo:
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/deno-bun-comparison.git
+git clone https://github.com/jaimeirazabal1/deno_vs_bun
 cd deno-bun-comparison
 ```
 
