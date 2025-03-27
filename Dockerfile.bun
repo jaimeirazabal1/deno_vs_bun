@@ -1,0 +1,9 @@
+FROM oven/bun:1.0.25
+
+WORKDIR /app
+
+COPY bun-app/ .
+
+EXPOSE 3000
+
+CMD ["bun", "run", "main.ts"] 

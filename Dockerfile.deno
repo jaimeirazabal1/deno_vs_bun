@@ -1,0 +1,11 @@
+FROM denoland/deno:1.40.0
+
+WORKDIR /app
+
+COPY deno-app/ .
+
+RUN deno cache main.ts
+
+EXPOSE 3000
+
+CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-write", "main.ts"] 

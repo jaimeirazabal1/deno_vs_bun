@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  deno-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.deno
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./deno-app:/app
+      - deno_data:/app/data
+    environment:
+      - NODE_ENV=production
+
+  bun-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.bun
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./bun-app:/app
+      - bun_data:/app/data
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  deno_data:
+  bun_data:
